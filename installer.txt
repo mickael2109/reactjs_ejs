@@ -1,0 +1,6 @@
+npm i nodemon
+npm i express
+npm i uuid
+npm i morgan
+npm i ejs
+npm i mysql express-myconnection
