@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"  # Commande pour construire votre application
+  publish = "dist"          # Dossier contenant les fichiers à déployer
+
+[context.production.environment]
+  NODE_VERSION = "18"       # Version de Node.js à utiliser en production
