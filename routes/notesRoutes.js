@@ -7,16 +7,13 @@ router.get('/', (req, res) =>{
     req.getConnection((erreur, connection) => {
         if(erreur){
             console.log(erreur)
-            res.status(500).render('erreur', {erreur})
         }else{
             connection.query('SELECT * FROM notes', [], (erreur, resultat) => {
                 if(erreur){
                     console.log(erreur)
-                    res.status(500).render('erreur', {erreur})
                 }else{
                     users = resultat
-                    // res.send(users);
-                    res.status(200).render('index', { resultat })
+                    res.json(response)
                     
                 }
             })
